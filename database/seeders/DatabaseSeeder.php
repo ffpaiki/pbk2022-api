@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\Jurusan;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -14,11 +16,18 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        Jurusan::factory()->create([
+            'nama_jurusan' => 'Teknik Informatika',
+            'kajur' => 'Julius Naibaho',
+            'kalab' => 'Parma Hadi Rantelinggi',
+            'jumlah_prodi' => 2,
+        ]);
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        Jurusan::factory()->create([
+            'nama_jurusan' => 'Teknik Sipil',
+            'kajur' => 'Indra Birawaputra',
+            'kalab' => 'Rizki Pratama',
+            'jumlah_prodi' => 1,
+        ]);
     }
 }
